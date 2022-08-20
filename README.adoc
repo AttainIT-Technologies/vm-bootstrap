@@ -2,5 +2,17 @@
 
 == Overview
 
-This repo contains miscellaneous bootstrap scripts for R&D virtual machines.  Each virtual
-machine setup is in its own directory and will contain its own README file. 
+This repo contains miscellaneous bootstrap scripts for Ubuntu R&D virtual machines.  Each 
+virtual machine setup is in its own directory and will contain its own README file. 
+
+== Installation
+
+After your vm is built, issue the following commands to clone the repo. Change into the 
+appropriate directory and continue bootstrap setup per specific vm directions.
+
+```
+$ cd ~
+$ sudo apt install git -y
+$ git clone git@github.com:AttainIT-Technologies/vm-bootstrap.git
+$ cd [specific-vm]
+```
