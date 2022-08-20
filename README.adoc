@@ -13,6 +13,6 @@ appropriate directory and continue bootstrap setup per specific vm directions.
 ```
 $ cd ~
 $ sudo apt install git -y
-$ git clone git@github.com:AttainIT-Technologies/vm-bootstrap.git
-$ cd [specific-vm]
+$ git clone https://github.com/AttainIT-Technologies/vm-bootstrap.git
+$ cd [specific-vm-directory]
 ```
