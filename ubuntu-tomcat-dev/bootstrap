@@ -3,26 +3,19 @@
 echo "bootstrap instance for apache tomcat development"
 
 sudo apt update
-sudo apt install tree -y
+sudo apt install tree default-jdk ant git -y
 
-mkdir -p ~/tomcatdev/tomcat-build-libs
-echo "TOMCAT_DEV=~/tomcatdev; export TOMCAT_DEV" >> ~/.bashrc
-
-sudo apt install default-jdk -y
 java -version
-echo "JAVA_HOME=/usr/lib/jvm/default-java/; export JAVA_HOME" >> ~/.bashrc
-
-sudo apt install ant -y
 ant -version
-
-sudo apt install git -y
 git --version
 
-cd ~/tomcatdev
-git clone https://github.com/apache/tomcat.git
-echo "TOMCAT_SRC=~/tomcatdev/tomcat; export TOMCAT_SRC" >> ~/.bashrc
+mkdir -p ~/dev/tomcat-build-libs
+echo 'JAVA_HOME=/usr/lib/jvm/default-java/; export JAVA_HOME' >> ~/.bashrc
 
-cp ./build.properties ~/tomcatdev/tomcat/build.properties
+git clone https://github.com/apache/tomcat.git ~/dev/tomcat
+echo 'TOMCAT_SRC=~/dev/tomcat; export TOMCAT_SRC' >> ~/.bashrc
+
+cp ./build.properties ~/dev/tomcat/build.properties
 
 sudo apt install software-properties-common apt-transport-https wget -y
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
