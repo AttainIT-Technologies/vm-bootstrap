@@ -1,0 +1,7 @@
+:toc:
+
+== Overview
+
+This boostrap folder performs the setup of an Ubuntu virtual machine used
+for Apache Tomcat development.  This is not a setup for development USING Tomcat,
+it is a setup for performing development work ON the Tomcat baseline itself.
